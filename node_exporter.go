@@ -37,6 +37,7 @@ import (
 	"github.com/prometheus/exporter-toolkit/web"
 	"github.com/prometheus/exporter-toolkit/web/kingpinflag"
 	"github.com/prometheus/node_exporter/collector"
+	"github.com/prometheus/node_exporter/hostinfo"
 )
 
 // handler wraps an unfiltered http.Handler but uses a filtered handler,
@@ -198,6 +199,7 @@ func main() {
 	runtime.GOMAXPROCS(*maxProcs)
 	level.Debug(logger).Log("msg", "Go MAXPROCS", "procs", runtime.GOMAXPROCS(0))
 
+	http.Handle(hostinfo.Path, hostinfo.Handler{})
 	http.Handle(*metricsPath, newHandler(!*disableExporterMetrics, *maxRequests, logger))
 	if *metricsPath != "/" {
 		landingConfig := web.LandingConfig{
@@ -208,6 +210,10 @@ func main() {
 				{
 					Address: *metricsPath,
 					Text:    "Metrics",
+				},
+				{
+					Address: hostinfo.Path,
+					Text:    "HostInfo",
 				},
 			},
 		}
