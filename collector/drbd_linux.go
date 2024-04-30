@@ -82,9 +82,9 @@ type drbdCollector struct {
 	logger     log.Logger
 }
 
-func init() {
-	registerCollector("drbd", defaultDisabled, newDRBDCollector)
-}
+// func init() {
+// 	registerCollector("drbd", defaultDisabled, newDRBDCollector)
+// }
 
 func newDRBDCollector(logger log.Logger) (Collector, error) {
 	return &drbdCollector{

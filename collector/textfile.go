@@ -49,9 +49,9 @@ type textFileCollector struct {
 	logger log.Logger
 }
 
-func init() {
-	registerCollector("textfile", defaultEnabled, NewTextFileCollector)
-}
+// func init() {
+// 	registerCollector("textfile", defaultEnabled, NewTextFileCollector)
+// }
 
 // NewTextFileCollector returns a new Collector exposing metrics read from files
 // in the given textfile directory.

@@ -35,9 +35,9 @@ type infinibandCollector struct {
 	subsystem   string
 }
 
-func init() {
-	registerCollector("infiniband", defaultEnabled, NewInfiniBandCollector)
-}
+// func init() {
+// 	registerCollector("infiniband", defaultEnabled, NewInfiniBandCollector)
+// }
 
 // NewInfiniBandCollector returns a new Collector exposing InfiniBand stats.
 func NewInfiniBandCollector(logger log.Logger) (Collector, error) {

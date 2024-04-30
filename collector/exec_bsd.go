@@ -27,9 +27,9 @@ type execCollector struct {
 	logger  log.Logger
 }
 
-func init() {
-	registerCollector("exec", defaultEnabled, NewExecCollector)
-}
+// func init() {
+// 	registerCollector("exec", defaultEnabled, NewExecCollector)
+// }
 
 // NewExecCollector returns a new Collector exposing system execution statistics.
 func NewExecCollector(logger log.Logger) (Collector, error) {

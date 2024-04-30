@@ -37,9 +37,9 @@ type sysctlCollector struct {
 	sysctls []*sysctl
 }
 
-func init() {
-	registerCollector("sysctl", defaultDisabled, NewSysctlCollector)
-}
+// func init() {
+// 	registerCollector("sysctl", defaultDisabled, NewSysctlCollector)
+// }
 
 func NewSysctlCollector(logger log.Logger) (Collector, error) {
 	fs, err := procfs.NewFS(*procPath)

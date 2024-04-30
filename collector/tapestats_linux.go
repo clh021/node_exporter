@@ -48,9 +48,9 @@ type tapestatsCollector struct {
 	logger                log.Logger
 }
 
-func init() {
-	registerCollector("tapestats", defaultEnabled, NewTapestatsCollector)
-}
+// func init() {
+// 	registerCollector("tapestats", defaultEnabled, NewTapestatsCollector)
+// }
 
 // NewTapestatsCollector returns a new Collector exposing tape device stats.
 // Docs from https://www.kernel.org/doc/html/latest/scsi/st.html#sysfs-and-statistics-for-tape-devices

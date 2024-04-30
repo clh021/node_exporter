@@ -32,9 +32,9 @@ type zoneinfoCollector struct {
 	fs                 procfs.FS
 }
 
-func init() {
-	registerCollector("zoneinfo", defaultDisabled, NewZoneinfoCollector)
-}
+// func init() {
+// 	registerCollector("zoneinfo", defaultDisabled, NewZoneinfoCollector)
+// }
 
 // NewZoneinfoCollector returns a new Collector exposing zone stats.
 func NewZoneinfoCollector(logger log.Logger) (Collector, error) {

@@ -38,9 +38,9 @@ type sockStatCollector struct {
 	logger log.Logger
 }
 
-func init() {
-	registerCollector(sockStatSubsystem, defaultEnabled, NewSockStatCollector)
-}
+// func init() {
+// 	registerCollector(sockStatSubsystem, defaultEnabled, NewSockStatCollector)
+// }
 
 // NewSockStatCollector returns a new Collector exposing socket stats.
 func NewSockStatCollector(logger log.Logger) (Collector, error) {

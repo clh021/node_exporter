@@ -27,9 +27,9 @@ type interruptsCollector struct {
 	logger log.Logger
 }
 
-func init() {
-	registerCollector("interrupts", defaultDisabled, NewInterruptsCollector)
-}
+// func init() {
+// 	registerCollector("interrupts", defaultDisabled, NewInterruptsCollector)
+// }
 
 // NewInterruptsCollector returns a new Collector exposing interrupts stats.
 func NewInterruptsCollector(logger log.Logger) (Collector, error) {

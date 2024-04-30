@@ -29,9 +29,9 @@ type xfrmCollector struct {
 	logger log.Logger
 }
 
-func init() {
-	registerCollector("xfrm", defaultDisabled, NewXfrmCollector)
-}
+// func init() {
+// 	registerCollector("xfrm", defaultDisabled, NewXfrmCollector)
+// }
 
 // NewXfrmCollector returns a new Collector exposing XFRM stats.
 func NewXfrmCollector(logger log.Logger) (Collector, error) {

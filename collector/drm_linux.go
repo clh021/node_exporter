@@ -41,9 +41,9 @@ type drmCollector struct {
 	MemoryVRAMUsed        *prometheus.Desc
 }
 
-func init() {
-	registerCollector("drm", defaultDisabled, NewDrmCollector)
-}
+// func init() {
+// 	registerCollector("drm", defaultDisabled, NewDrmCollector)
+// }
 
 // NewDrmCollector returns a new Collector exposing /sys/class/drm/card?/device stats.
 func NewDrmCollector(logger log.Logger) (Collector, error) {

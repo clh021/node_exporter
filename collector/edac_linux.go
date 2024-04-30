@@ -42,9 +42,9 @@ type edacCollector struct {
 	logger       log.Logger
 }
 
-func init() {
-	registerCollector("edac", defaultEnabled, NewEdacCollector)
-}
+// func init() {
+// 	registerCollector("edac", defaultEnabled, NewEdacCollector)
+// }
 
 // NewEdacCollector returns a new Collector exposing edac stats.
 func NewEdacCollector(logger log.Logger) (Collector, error) {

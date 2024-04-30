@@ -46,9 +46,9 @@ var (
 	}
 )
 
-func init() {
-	registerCollector("hwmon", defaultEnabled, NewHwMonCollector)
-}
+// func init() {
+// 	registerCollector("hwmon", defaultEnabled, NewHwMonCollector)
+// }
 
 type hwMonCollector struct {
 	deviceFilter deviceFilter

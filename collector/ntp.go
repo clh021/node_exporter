@@ -54,9 +54,9 @@ type ntpCollector struct {
 	logger                                                                 log.Logger
 }
 
-func init() {
-	registerCollector("ntp", defaultDisabled, NewNtpCollector)
-}
+// func init() {
+// 	registerCollector("ntp", defaultDisabled, NewNtpCollector)
+// }
 
 // NewNtpCollector returns a new Collector exposing sanity of local NTP server.
 // Default definition of "local" is:

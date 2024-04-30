@@ -49,9 +49,9 @@ var (
 	oldCollectorQdiskDeviceExclude = kingpin.Flag("collector.qdisk.device-exclude", "DEPRECATED: Use collector.qdisc.device-exclude").Hidden().String()
 )
 
-func init() {
-	registerCollector("qdisc", defaultDisabled, NewQdiscStatCollector)
-}
+// func init() {
+// 	registerCollector("qdisc", defaultDisabled, NewQdiscStatCollector)
+// }
 
 // NewQdiscStatCollector returns a new Collector exposing queuing discipline statistics.
 func NewQdiscStatCollector(logger log.Logger) (Collector, error) {

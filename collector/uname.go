@@ -48,9 +48,9 @@ type uname struct {
 	DomainName string
 }
 
-func init() {
-	registerCollector("uname", defaultEnabled, newUnameCollector)
-}
+// func init() {
+// 	registerCollector("uname", defaultEnabled, newUnameCollector)
+// }
 
 // NewUnameCollector returns new unameCollector.
 func newUnameCollector(logger log.Logger) (Collector, error) {

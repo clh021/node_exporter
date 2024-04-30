@@ -36,9 +36,9 @@ type buddyinfoCollector struct {
 	logger log.Logger
 }
 
-func init() {
-	registerCollector("buddyinfo", defaultDisabled, NewBuddyinfoCollector)
-}
+// func init() {
+// 	registerCollector("buddyinfo", defaultDisabled, NewBuddyinfoCollector)
+// }
 
 // NewBuddyinfoCollector returns a new Collector exposing buddyinfo stats.
 func NewBuddyinfoCollector(logger log.Logger) (Collector, error) {

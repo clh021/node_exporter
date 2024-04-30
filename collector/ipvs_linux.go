@@ -67,9 +67,9 @@ var (
 	ipvsLabels = kingpin.Flag("collector.ipvs.backend-labels", "Comma separated list for IPVS backend stats labels.").Default(strings.Join(fullIpvsBackendLabels, ",")).String()
 )
 
-func init() {
-	registerCollector("ipvs", defaultEnabled, NewIPVSCollector)
-}
+// func init() {
+// 	registerCollector("ipvs", defaultEnabled, NewIPVSCollector)
+// }
 
 // NewIPVSCollector sets up a new collector for IPVS metrics. It accepts the
 // "procfs" config parameter to override the default proc location (/proc).

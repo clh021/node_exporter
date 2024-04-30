@@ -35,9 +35,9 @@ type fibrechannelCollector struct {
 	subsystem   string
 }
 
-func init() {
-	registerCollector("fibrechannel", defaultEnabled, NewFibreChannelCollector)
-}
+// func init() {
+// 	registerCollector("fibrechannel", defaultEnabled, NewFibreChannelCollector)
+// }
 
 // NewFibreChannelCollector returns a new Collector exposing FibreChannel stats.
 func NewFibreChannelCollector(logger log.Logger) (Collector, error) {

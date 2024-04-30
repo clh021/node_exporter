@@ -52,9 +52,9 @@ var (
 	collectorWifi = kingpin.Flag("collector.wifi.fixtures", "test fixtures to use for wifi collector metrics").Default("").String()
 )
 
-func init() {
-	registerCollector("wifi", defaultDisabled, NewWifiCollector)
-}
+// func init() {
+// 	registerCollector("wifi", defaultDisabled, NewWifiCollector)
+// }
 
 var _ wifiStater = &wifi.Client{}
 

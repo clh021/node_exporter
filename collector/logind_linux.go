@@ -81,9 +81,9 @@ type logindSeatEntry struct {
 	SeatObjectPath dbus.ObjectPath
 }
 
-func init() {
-	registerCollector("logind", defaultDisabled, NewLogindCollector)
-}
+// func init() {
+// 	registerCollector("logind", defaultDisabled, NewLogindCollector)
+// }
 
 // NewLogindCollector returns a new Collector exposing logind statistics.
 func NewLogindCollector(logger log.Logger) (Collector, error) {

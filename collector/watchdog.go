@@ -32,9 +32,9 @@ type watchdogCollector struct {
 	logger log.Logger
 }
 
-func init() {
-	registerCollector("watchdog", defaultEnabled, NewWatchdogCollector)
-}
+// func init() {
+// 	registerCollector("watchdog", defaultEnabled, NewWatchdogCollector)
+// }
 
 // NewWatchdogCollector returns a new Collector exposing watchdog stats.
 func NewWatchdogCollector(logger log.Logger) (Collector, error) {

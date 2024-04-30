@@ -31,9 +31,9 @@ type slabinfoCollector struct {
 	labels    []string
 }
 
-func init() {
-	registerCollector("slabinfo", defaultDisabled, NewSlabinfoCollector)
-}
+// func init() {
+// 	registerCollector("slabinfo", defaultDisabled, NewSlabinfoCollector)
+// }
 
 func NewSlabinfoCollector(logger log.Logger) (Collector, error) {
 	fs, err := procfs.NewFS(*procPath)

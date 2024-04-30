@@ -44,9 +44,9 @@ type supervisordCollector struct {
 	logger         log.Logger
 }
 
-func init() {
-	registerCollector("supervisord", defaultDisabled, NewSupervisordCollector)
-}
+// func init() {
+// 	registerCollector("supervisord", defaultDisabled, NewSupervisordCollector)
+// }
 
 // NewSupervisordCollector returns a new Collector exposing supervisord statistics.
 func NewSupervisordCollector(logger log.Logger) (Collector, error) {

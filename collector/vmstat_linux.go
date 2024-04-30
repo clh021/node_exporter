@@ -42,9 +42,9 @@ type vmStatCollector struct {
 	logger       log.Logger
 }
 
-func init() {
-	registerCollector("vmstat", defaultEnabled, NewvmStatCollector)
-}
+// func init() {
+// 	registerCollector("vmstat", defaultEnabled, NewvmStatCollector)
+// }
 
 // NewvmStatCollector returns a new Collector exposing vmstat stats.
 func NewvmStatCollector(logger log.Logger) (Collector, error) {

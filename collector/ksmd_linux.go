@@ -34,9 +34,9 @@ type ksmdCollector struct {
 	logger      log.Logger
 }
 
-func init() {
-	registerCollector("ksmd", defaultDisabled, NewKsmdCollector)
-}
+// func init() {
+// 	registerCollector("ksmd", defaultDisabled, NewKsmdCollector)
+// }
 
 func getCanonicalMetricName(filename string) string {
 	switch filename {

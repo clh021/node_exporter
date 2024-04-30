@@ -46,9 +46,9 @@ type devstatCollector struct {
 	logger    log.Logger
 }
 
-func init() {
-	registerCollector("devstat", defaultDisabled, NewDevstatCollector)
-}
+// func init() {
+// 	registerCollector("devstat", defaultDisabled, NewDevstatCollector)
+// }
 
 // NewDevstatCollector returns a new Collector exposing Device stats.
 func NewDevstatCollector(logger log.Logger) (Collector, error) {

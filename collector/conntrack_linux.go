@@ -52,9 +52,9 @@ type conntrackStatistics struct {
 	searchRestart uint64 // Number of conntrack table lookups which had to be restarted due to hashtable resizes
 }
 
-func init() {
-	registerCollector("conntrack", defaultEnabled, NewConntrackCollector)
-}
+// func init() {
+// 	registerCollector("conntrack", defaultEnabled, NewConntrackCollector)
+// }
 
 // NewConntrackCollector returns a new Collector exposing conntrack stats.
 func NewConntrackCollector(logger log.Logger) (Collector, error) {

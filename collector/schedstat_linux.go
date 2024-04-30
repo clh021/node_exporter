@@ -67,9 +67,9 @@ type schedstatCollector struct {
 	logger log.Logger
 }
 
-func init() {
-	registerCollector("schedstat", defaultEnabled, NewSchedstatCollector)
-}
+// func init() {
+// 	registerCollector("schedstat", defaultEnabled, NewSchedstatCollector)
+// }
 
 func (c *schedstatCollector) Update(ch chan<- prometheus.Metric) error {
 	stats, err := c.fs.Schedstat()

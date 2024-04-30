@@ -31,9 +31,9 @@ type entropyCollector struct {
 	logger          log.Logger
 }
 
-func init() {
-	registerCollector("entropy", defaultEnabled, NewEntropyCollector)
-}
+// func init() {
+// 	registerCollector("entropy", defaultEnabled, NewEntropyCollector)
+// }
 
 // NewEntropyCollector returns a new Collector exposing entropy stats.
 func NewEntropyCollector(logger log.Logger) (Collector, error) {

@@ -42,9 +42,9 @@ type processCollector struct {
 	logger       log.Logger
 }
 
-func init() {
-	registerCollector("processes", defaultDisabled, NewProcessStatCollector)
-}
+// func init() {
+// 	registerCollector("processes", defaultDisabled, NewProcessStatCollector)
+// }
 
 // NewProcessStatCollector returns a new Collector exposing process data read from the proc filesystem.
 func NewProcessStatCollector(logger log.Logger) (Collector, error) {

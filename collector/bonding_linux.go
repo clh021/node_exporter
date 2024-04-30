@@ -33,9 +33,9 @@ type bondingCollector struct {
 	logger         log.Logger
 }
 
-func init() {
-	registerCollector("bonding", defaultEnabled, NewBondingCollector)
-}
+// func init() {
+// 	registerCollector("bonding", defaultEnabled, NewBondingCollector)
+// }
 
 // NewBondingCollector returns a newly allocated bondingCollector.
 // It exposes the number of configured and active slave of linux bonding interfaces.

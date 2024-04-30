@@ -18,6 +18,7 @@ package collector
 
 import (
 	"fmt"
+
 	"github.com/go-kit/log"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/procfs"
@@ -29,9 +30,9 @@ type softirqsCollector struct {
 	logger log.Logger
 }
 
-func init() {
-	registerCollector("softirqs", defaultDisabled, NewSoftirqsCollector)
-}
+// func init() {
+// 	registerCollector("softirqs", defaultDisabled, NewSoftirqsCollector)
+// }
 
 // NewSoftirqsCollector returns a new Collector exposing softirq stats.
 func NewSoftirqsCollector(logger log.Logger) (Collector, error) {

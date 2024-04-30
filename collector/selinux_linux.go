@@ -29,9 +29,9 @@ type selinuxCollector struct {
 	logger      log.Logger
 }
 
-func init() {
-	registerCollector("selinux", defaultEnabled, NewSelinuxCollector)
-}
+// func init() {
+// 	registerCollector("selinux", defaultEnabled, NewSelinuxCollector)
+// }
 
 // NewSelinuxCollector returns a new Collector exposing SELinux statistics.
 func NewSelinuxCollector(logger log.Logger) (Collector, error) {

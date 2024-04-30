@@ -33,9 +33,9 @@ type dmiCollector struct {
 	values   []string
 }
 
-func init() {
-	registerCollector("dmi", defaultEnabled, NewDMICollector)
-}
+// func init() {
+// 	registerCollector("dmi", defaultEnabled, NewDMICollector)
+// }
 
 // NewDMICollector returns a new Collector exposing DMI information.
 func NewDMICollector(logger log.Logger) (Collector, error) {

@@ -33,9 +33,9 @@ type cgroupSummaryCollector struct {
 	logger  log.Logger
 }
 
-func init() {
-	registerCollector(cgroupsCollectorSubsystem, defaultDisabled, NewCgroupSummaryCollector)
-}
+// func init() {
+// 	registerCollector(cgroupsCollectorSubsystem, defaultDisabled, NewCgroupSummaryCollector)
+// }
 
 // NewCgroupSummaryCollector returns a new Collector exposing a summary of cgroups.
 func NewCgroupSummaryCollector(logger log.Logger) (Collector, error) {

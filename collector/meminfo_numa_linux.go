@@ -48,9 +48,9 @@ type meminfoNumaCollector struct {
 	logger      log.Logger
 }
 
-func init() {
-	registerCollector("meminfo_numa", defaultDisabled, NewMeminfoNumaCollector)
-}
+// func init() {
+// 	registerCollector("meminfo_numa", defaultDisabled, NewMeminfoNumaCollector)
+// }
 
 // NewMeminfoNumaCollector returns a new Collector exposing memory stats.
 func NewMeminfoNumaCollector(logger log.Logger) (Collector, error) {

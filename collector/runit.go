@@ -34,9 +34,9 @@ type runitCollector struct {
 	logger         log.Logger
 }
 
-func init() {
-	registerCollector("runit", defaultDisabled, NewRunitCollector)
-}
+// func init() {
+// 	registerCollector("runit", defaultDisabled, NewRunitCollector)
+// }
 
 // NewRunitCollector returns a new Collector exposing runit statistics.
 func NewRunitCollector(logger log.Logger) (Collector, error) {

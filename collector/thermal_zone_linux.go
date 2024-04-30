@@ -38,9 +38,9 @@ type thermalZoneCollector struct {
 	logger                log.Logger
 }
 
-func init() {
-	registerCollector("thermal_zone", defaultEnabled, NewThermalZoneCollector)
-}
+// func init() {
+// 	registerCollector("thermal_zone", defaultEnabled, NewThermalZoneCollector)
+// }
 
 // NewThermalZoneCollector returns a new Collector exposing kernel/system statistics.
 func NewThermalZoneCollector(logger log.Logger) (Collector, error) {
